@@ -39,25 +39,21 @@ function App() {
   }, [])
 
   const deleteNote = async (entry) => {
+    deleteNoteState(entry._id);
+
     try {
-      await fetch(`http://localhost:4000/deleteNote/${entry._id}`,
-        {
-          method: "DELETE",
-          headers: {
+      const response = await fetch(`http://localhost:4000/deleteNote/${entry._id}`, {
+        method: "DELETE",
+        headers: {
             "Content-Type": "application/json"
-          }
-        })
-        .then(async (response) => {
-          if (!response.ok) {
-            console.log("Served failed:", response.status)
-          } else {
-            await response.json().then((data) => {
-              deleteNoteState(entry._id)
-            })
-          }
-        })
+        },
+      });
+  
+      if (!response.ok) {
+        console.log("Server failed to delete the note:", response.status);
+      }
     } catch (error) {
-      console.log("Fetch function failed:", error)
+      console.error("Delete function failed:", error);
     }
   }
 

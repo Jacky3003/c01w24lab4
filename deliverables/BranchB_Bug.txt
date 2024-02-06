@@ -1,1 +1,2 @@
 
+The delete function is not properly implemented in the frontend and backend. I made a bug fix - Denny

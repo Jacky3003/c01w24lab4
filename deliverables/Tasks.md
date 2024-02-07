@@ -6,7 +6,8 @@
 ## Jacky Ji (jacky.ji@mail.utoronto.ca)
 - Was person 3 for the lab, responsible for adding the search notes feature and rebasing Branch D into Branch C
 
-## Aarin Jasikumar ()
+## Aarin Jasikumar (aarin.jasikumar@mail.utoronto.ca)
+- Was person 5 for the lab, responsible for creating the pull request template and facilitating the pull request of Branch A into branch devel.
 
 ## Denny Wang ()
 

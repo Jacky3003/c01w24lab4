@@ -13,5 +13,6 @@
 - Was person 2 for the lab, responsible for fixing the bug related to delete and changing the color of the note
 
 ## Anthony Qin ()
+- Was person 4 for the lab, so, i did all the things person 4 is supposed to do. Pretty straight forward. 
 
 ## Seven Jang ()

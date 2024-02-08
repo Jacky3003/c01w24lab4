@@ -10,6 +10,7 @@
 - Was person 5 for the lab, responsible for creating the pull request template and facilitating the pull request of Branch A into branch devel.
 
 ## Denny Wang ()
+- Was person 2 for the lab, responsible for fixing the bug related to delete and changing the color of the note
 
 ## Anthony Qin ()
 

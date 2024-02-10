@@ -16,3 +16,4 @@
 - Was person 4 for the lab, so, i did all the things person 4 is supposed to do. Pretty straight forward. 
 
 ## Seven Jang ()
+- Was person 6, responsible for helping to create the PR template and facilitating the PR of Branch C into devel branch.

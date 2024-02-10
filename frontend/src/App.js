@@ -40,21 +40,25 @@ function App() {
   }, [])
 
   const deleteNote = async (entry) => {
-    deleteNoteState(entry._id);
-
     try {
-      const response = await fetch(`http://localhost:4000/deleteNote/${entry._id}`, {
-        method: "DELETE",
-        headers: {
+      await fetch(`http://localhost:4000/deleteNote/${entry._id}`,
+        {
+          method: "DELETE",
+          headers: {
             "Content-Type": "application/json"
-        },
-      });
-  
-      if (!response.ok) {
-        console.log("Server failed to delete the note:", response.status);
-      }
+          }
+        })
+        .then(async (response) => {
+          if (!response.ok) {
+            console.log("Served failed:", response.status)
+          } else {
+            await response.json().then((data) => {
+              deleteNoteState(entry._id)
+            })
+          }
+        })
     } catch (error) {
-      console.error("Delete function failed:", error);
+      console.log("Fetch function failed:", error)
     }
   }
 
@@ -131,11 +135,37 @@ function App() {
   }
 
 
+
   const filteredNotes = searchQuery
   ? notes.filter(note =>
       note.title.toLowerCase().includes(searchQuery.toLowerCase())
     )
   : notes;
+
+  // Colour coding code
+  const onChangeColor = async (noteId, color) => {
+    try {
+      const response = await fetch(`http://localhost:4000/updateNoteColor/${noteId}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ color }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to update note color');
+      }
+
+      setNotes((prevNotes) =>
+        prevNotes.map((note) =>
+          note._id === noteId ? { ...note, color: color } : note
+        )
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div className="App">
@@ -158,6 +188,7 @@ function App() {
                 entry={entry} 
                 editNote={editNote} 
                 deleteNote={deleteNote}
+                onChangeColor={onChangeColor}
                 />
               </div>
               )

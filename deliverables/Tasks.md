@@ -17,3 +17,4 @@
 
 ## Seven Jang ()
 - Was person 6, responsible for helping to create the PR template and facilitating the PR of Branch C into devel branch.
+- Helped with creating the Git WorkFlow Diagram

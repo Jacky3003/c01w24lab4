@@ -9,10 +9,10 @@
 ## Aarin Jasikumar (aarin.jasikumar@mail.utoronto.ca)
 - Was person 5 for the lab, responsible for creating the pull request template and facilitating the pull request of Branch A into branch devel.
 
-## Denny Wang ()
+## Denny Wang (denny.wang@mail.utoronto.ca)
 - Was person 2 for the lab, responsible for fixing the bug related to delete and changing the color of the note
 
-## Anthony Qin ()
+## Anthony Qin (anthony.qin@mail.utoronto.ca)
 - Was person 4 for the lab, so, i did all the things person 4 is supposed to do. Pretty straight forward. 
 
 ## Seven Jang (seven.jang@mail.utoronto.ca)
